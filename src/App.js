@@ -1,30 +1,13 @@
-
-import './App.scss';
-
-
+import "./App.scss";
+import MainContent from "./Components/MainContent/main-content-component";
 
 function App() {
   return (
     <div className="main-container">
-    <div className="topbar">
+      <div className="topbar"></div>
 
-        <div>
-            ABC
-        </div>
-
+      <MainContent/>
     </div>
-
-    <div className="main-content">
-
-        <div>
-            Content
-        </div>
-
-    </div>
-
-
-</div>
-
   );
 }
 

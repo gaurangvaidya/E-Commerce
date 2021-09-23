@@ -1,16 +1,10 @@
 import React from "react";
+import MenuItem from "../MenuItem/menu-item.components";
+import MenuList from "../MenuList/menu-list.component";
 import "./main-content.styles.scss";
 const MainContent = () => (
   <div className="main-content">
-    <div className="item-container">
-      
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-        <div>4</div>
-        <div>5</div>
-     
-    </div>
+    <MenuList/>
   </div>
 );
 export default MainContent;

@@ -1,0 +1,15 @@
+.item-container {
+    height: 90%;
+    width: 100%;
+    padding-left: 4.25em;
+    padding-right: 4.25em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 2em;
+    column-gap: 2em;
+    justify-content: center;
+    align-content: stretch;
+
+
+
+}

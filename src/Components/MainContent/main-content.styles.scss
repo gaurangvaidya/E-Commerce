@@ -6,18 +6,3 @@
     align-items: center;
 }
 
-.item-container {
-    height: 90%;
-    width: 100%;
-    padding-left: 4.25em;
-    padding-right: 4.25em;
-    display: grid;
-    grid-template-columns:1fr 1fr 1fr;
-
-    div{
-        border: 1px solid black;
-    }
-    
-   
-
-}

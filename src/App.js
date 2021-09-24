@@ -1,12 +1,17 @@
+import React from "react";
+
 import "./App.scss";
-import MainContent from "./Components/MainContent/main-content-component";
+import Topbar from "./Components/Topbar/topbar.component";
+
+import Routing from "./routing.component";
 
 function App() {
   return (
     <div className="main-container">
-      <div className="topbar"></div>
-
-      <MainContent/>
+      <Topbar/>
+      <div className="main-content">
+        <Routing />
+      </div>
     </div>
   );
 }

@@ -47,8 +47,8 @@ class MenuList extends React.Component {
   render() {
     return (
       <div className="item-container">
-        {this.state.sections.map(({ title, imageUrl, linkUrl, key }) => (
-          <MenuItem key={key} title={title} imageUrl={imageUrl} />
+        {this.state.sections.map(({id,...otherProps}) => (
+          <MenuItem key={id} {...otherProps} />
         ))}
       </div>
     );

@@ -1,0 +1,42 @@
+.shop-item-container {
+    padding: 0;
+    height: 30em;
+    flex-direction: column;
+    margin-bottom: 2em;
+
+
+    .item-image-row{
+
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        height: 100%;
+        width: 100%;
+        column-gap: 1em;
+        
+        .shop-individual-item-container {
+            display: flex;
+            width:100% ;
+            height: 100%;
+            flex-direction: column;
+
+            .image {
+                background-size: cover;
+                background-position: center;
+                height: 90%;
+                width: 100%;
+    
+                
+            }
+
+            .shop-individual-item-footer {
+                display: flex;
+                justify-content: space-between;
+                height: 10%;
+                width: 100%;
+            }
+        }
+
+        
+
+    }
+}

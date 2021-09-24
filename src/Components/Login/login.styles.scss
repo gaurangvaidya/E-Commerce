@@ -1,0 +1,29 @@
+.login-container {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    
+    .login-title {
+        margin-bottom:1em;
+    }
+
+    .login-subtitle {
+        margin-bottom: 1em;
+    }
+
+    
+
+    
+    .form-container {
+        display: flex;
+        flex-direction: column;
+        row-gap: 2.2em;
+    }
+
+    .login-button-container {
+        display: flex;
+        flex-direction: row;
+        column-gap: 2em;
+       
+    }
+}

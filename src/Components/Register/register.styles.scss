@@ -1,0 +1,20 @@
+.register-container {
+    display: flex;
+    width: 50%;
+    height: 100%;
+    flex-direction: column;
+
+    .register-title {
+        margin-bottom: 1em;
+    }
+
+    .register-subtitle {
+        margin-bottom: 1em;
+    }
+
+    .register-form-container {
+        display: flex;
+        flex-direction: column;
+        
+    }
+}

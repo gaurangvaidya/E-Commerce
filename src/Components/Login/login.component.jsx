@@ -2,6 +2,8 @@ import React from "react";
 import "./login.styles.scss";
 import { TextField } from '@mui/material';
 import CustomButton from "../CustomButtom/custom-button.component";
+import {setCurrentUser} from '../../Redux/user/user.action';
+import { connect } from "react-redux";
 
 class Login extends React.Component {
     constructor(props) {
@@ -16,6 +18,16 @@ class Login extends React.Component {
 
     handleSubmit = (event) => {
         event.preventDefault();
+
+        const { setCurrentUser } = this.props;
+        const {email,password} = this.state;
+
+        if(email==='gaurang@gmail.com' && password==='1234') {
+
+            setCurrentUser({email});
+
+        }
+    
 
         
         
@@ -70,4 +82,13 @@ class Login extends React.Component {
 
 }
 
-export default Login;
+const mapDispatchToProps = dispatch => {
+    return (
+        {
+            setCurrentUser:user=>dispatch(setCurrentUser(user))
+        }
+    )
+
+}
+
+export default connect(null,mapDispatchToProps)(Login);

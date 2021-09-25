@@ -15,6 +15,10 @@
     .register-form-container {
         display: flex;
         flex-direction: column;
-        
+        row-gap: 1.25em;
+    }
+
+    .register-button-container {
+        width: 30%;
     }
 }

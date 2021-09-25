@@ -2,6 +2,7 @@ import React from "react";
 import "./register.styles.scss";
 
 import { TextField } from "@mui/material";
+import CustomButton from "../CustomButtom/custom-button.component";
 
 class Register extends React.Component {
   constructor() {
@@ -15,9 +16,7 @@ class Register extends React.Component {
     };
   }
 
-  handleChange = (event) => {
-
-  }
+  handleChange = (event) => {};
 
   render() {
     return (
@@ -36,6 +35,35 @@ class Register extends React.Component {
             onChange={this.handleChange}
             style={{ width: "40%" }}
           />
+
+          <TextField
+            label="Email"
+            variant="standard"
+            name="email"
+            type="email"
+            onChange={this.handleChange}
+            style={{ width: "40%" }}
+          />
+
+          <TextField
+            label="Password"
+            variant="standard"
+            name="password"
+            type="password"
+            onChange={this.handleChange}
+            style={{ width: "40%" }}
+          />
+          <TextField
+            label="Confirm Password"
+            variant="standard"
+            name="confirmPassword"
+            type="password"
+            onChange={this.handleChange}
+            style={{ width: "40%" }}
+          />
+          <div className="register-button-container">
+            <CustomButton type="submit">Submit</CustomButton>
+          </div>
         </form>
       </div>
     );

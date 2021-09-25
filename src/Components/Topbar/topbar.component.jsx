@@ -1,8 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import { ReactComponent as Logo } from '../../assets/crown.svg';
+import { connect } from 'react-redux';
 import './topbar.styles.scss';
-const Topbar = () => {
+const Topbar = ({currentUser}) => {
+    const signOut = () => {
+
+    }
     return(
         <div className="topbar">
 
@@ -14,7 +18,13 @@ const Topbar = () => {
 
             <Link  to="/shop">Shop</Link>
             <Link to="/contact">Contact</Link>
-            <Link to="/signin">SignIn</Link>
+            {
+                currentUser?<div className="sign-out-button" onClick={signOut}>
+                Sign Out
+
+                </div> : <Link to="/signin">SignIn</Link>
+            }
+           
           
 
 
@@ -28,5 +38,10 @@ const Topbar = () => {
     );
 }
 
+const mapStateToProps = state => {
+    return ({
+        "currentUser":state.user.currentUser
+    })
+}
 
-export default Topbar;
+export default connect(mapStateToProps)(Topbar);

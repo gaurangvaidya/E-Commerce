@@ -1,0 +1,23 @@
+.cart-icon-container {
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  width: 10%;
+  height: 100%;
+  position: relative;
+
+
+
+  .item-count {
+    position: absolute;
+    font-size: 1em;
+    /* left: 0.5em; */
+    /* top: 0.25em; */
+    left: 30%;
+    top: 5%;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}

@@ -18,6 +18,7 @@
             width:100% ;
             height: 100%;
             flex-direction: column;
+            position:relative;
 
             .image {
                 background-size: cover;
@@ -28,6 +29,25 @@
                 
             }
 
+            .custom-button {
+                position: absolute;
+                width: 80%;
+                top: 77%;
+                left: 10%;
+                opacity: 0.7;
+                display: none;
+            }
+
+            &:hover {
+                .image {
+                    opacity: 0.8;
+                }
+
+                .custom-button {
+                    opacity: 0.85;
+                    display: block;
+                }
+            }
             .shop-individual-item-footer {
                 display: flex;
                 justify-content: space-between;

@@ -1,0 +1,36 @@
+.checkout-container {
+    display: flex;
+    width: 50%;
+    height: 100%;
+    align-items: flex-start;
+    flex-direction: column;
+
+    .total-price {
+        font-size: 2em;
+        font-weight: bold;
+    }
+
+    img {
+        width: 30%;
+        height: 30%;
+    }
+    .remove-button {
+        &:hover {
+            cursor: pointer;
+        }
+        
+    }
+
+    .quantity-arrows {
+        display: flex;
+        justify-content: space-evenly;
+
+    }
+
+    .arrow {
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+

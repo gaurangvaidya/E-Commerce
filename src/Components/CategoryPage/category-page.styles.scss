@@ -1,0 +1,15 @@
+.category-container {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 100%;
+
+    .category-collection-item-container {
+           display: grid;
+           grid-template-columns: 1fr 1fr 1fr;
+           column-gap: 1em;
+           height: 100%;
+           grid-auto-rows: 30em;
+
+    }
+}

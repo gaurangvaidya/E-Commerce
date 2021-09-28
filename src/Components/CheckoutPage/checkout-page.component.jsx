@@ -12,6 +12,7 @@ import { selectTotalPrice } from "../../Redux/cart/cart.selectors";
 import { connect } from "react-redux";
 import { selectCartItems } from "../../Redux/cart/cart.selectors";
 import { removeItemFromCart,reduceItemFromCart,addItemToCart } from "../../Redux/cart/cart.action";
+import StripeButton from "../StripeButton/stripe-button.component";
 
 const CheckoutPage = ({ totalPrice, cartItems, removeItemFromCart ,addItemToCart, reduceItemFromCart}) => {
   return (
@@ -61,6 +62,8 @@ const CheckoutPage = ({ totalPrice, cartItems, removeItemFromCart ,addItemToCart
       <div className="total-price">
         <span>Total:${totalPrice}</span>
       </div>
+
+      <StripeButton price={totalPrice}></StripeButton>
     </div>
   );
 };

@@ -1,25 +1,22 @@
 import React from "react";
 import CollectionPreview from "../CollectionPreview/collection-preview.component";
-
-import ShopData from "./shop.data";
+import { connect } from "react-redux";
 import "./shop.styles.scss";
-class Shop extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      collections: ShopData,
-    };
-  }
 
+class Shop extends React.Component {
   render() {
-    const { collections } = this.state;
+    console.log(this.props);
     return (
       <div className="shop-container">
-        <h1>Collections</h1>
-        <CollectionPreview collections={collections}/>
+          <CollectionPreview collections={this.props.collections}/>       
       </div>
     );
   }
 }
 
-export default Shop;
+const mapStateToProps = ({ collections }) => {
+  return {
+    collections: collections,
+  };
+};
+export default connect(mapStateToProps)(Shop);

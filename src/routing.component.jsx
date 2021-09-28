@@ -7,6 +7,7 @@ import SignIn from './Components/SignIn/sign-in.component';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 import CheckoutPage from './Components/CheckoutPage/checkout-page.component';
+import CategoryPage from './Components/CategoryPage/category-page.component';
 const Routing  = ({currentUser}) => {
     const toRenderSignIn = () => {
       if(currentUser) {
@@ -26,6 +27,8 @@ const Routing  = ({currentUser}) => {
         <Route exact path="/shop" component={Shop}/>
         <Route exact path="/signin" render={toRenderSignIn} />
         <Route exact path="/checkout" component={CheckoutPage}/>
+        <Route  path="/shop/:category" component={CategoryPage}/>
+        
         
       </Switch>
 

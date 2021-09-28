@@ -4,13 +4,18 @@ import './collection-preview.styles.scss';
 
 const CollectionPreview = ({collections}) => {
     return(
-        <div className="section-container">{
+        <div className="collection-preview-container">
+             <h1>Collections</h1>
+             <div className="section-container">{
             collections.map(({id,...rest})=>(
 
                 <CollectionItem key={id} {...rest}/>
            
             ))
           }</div>
+
+        </div>
+        
     );
 }
 

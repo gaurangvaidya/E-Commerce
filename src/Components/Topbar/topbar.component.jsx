@@ -15,9 +15,10 @@ const Topbar = ({ currentUser, setCurrentUser, hidden }) => {
   };
   return (
     <div className="topbar">
-      <Link to="/">
-        <Logo />
-      </Link>
+   <div>
+     
+   </div>
+
 
       <div className="option-container">
         <Link to="/shop">Shop</Link>
@@ -30,7 +31,10 @@ const Topbar = ({ currentUser, setCurrentUser, hidden }) => {
           <Link to="/signin">SignIn</Link>
         )}
 
-        <CartIcon />
+       
+            <CartIcon  />
+      
+
       </div>
       {hidden ? null : <CartDropdown />}
     </div>
